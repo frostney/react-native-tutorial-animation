@@ -5,26 +5,31 @@
 'use strict';
 
 var React = require('react-native');
-
 var {
-  Component,
   AppRegistry,
   StyleSheet,
   Text,
   View,
 } = React;
 
-var Board = require('./Board');
-
-class MemoryGame extends Component {
-  render() {
+var MemoryGame = React.createClass({
+  render: function() {
     return (
       <View style={styles.container}>
-        <Board />
+        <Text style={styles.welcome}>
+          Welcome to React Native!
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit index.ios.js
+        </Text>
+        <Text style={styles.instructions}>
+          Press Cmd+R to reload,{'\n'}
+          Cmd+D or shake for dev menu
+        </Text>
       </View>
     );
   }
-}
+});
 
 var styles = StyleSheet.create({
   container: {
